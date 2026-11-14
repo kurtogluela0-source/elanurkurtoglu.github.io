@@ -15,31 +15,39 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
       background: #f5f5f5;
       color: #111;
+      font-family: Arial, sans-serif;
     }
 
     .hero {
       min-height: 100vh;
-      padding: 80px 8%;
       display: flex;
       align-items: center;
-      border: 3px solid black;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 70px 6%;
       background: white;
+      border: 3px solid black;
+      overflow: hidden;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 0;
     }
 
     h1 {
-      font-size: clamp(50px, 8vw, 90px);
+      font-size: clamp(50px, 6vw, 90px);
       line-height: 1.05;
       letter-spacing: -3px;
-      margin-bottom: 25px;
+      margin: 0 0 25px;
     }
 
     p {
-      font-size: 20px;
+      font-size: 19px;
       line-height: 1.6;
-      max-width: 550px;
+      max-width: 520px;
     }
 
     .button {
@@ -53,26 +61,55 @@
       text-decoration: none;
       box-shadow: 4px 4px 0 black;
     }
+
+    .hero-image {
+      flex: 1.2;
+      min-width: 0;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 50px 6%;
+      }
+
+      .hero-image {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main class="hero">
-    <div>
+
+    <div class="hero-text">
       <h1>Hello.<br>I'm Ela.</h1>
 
       <p>
-        Electrical & Electronics Engineering Student
-      </p>
-
-      <p>
-        Embedded Systems | PCB Design | EV Technologies
+        I'm an Electrical & Electronics Engineering
+        student interested in embedded systems,
+        PCB design and EV technologies.
       </p>
 
       <a class="button" href="#projects">
         View my projects
       </a>
     </div>
+
+    <div class="hero-image">
+      <img
+        src="ela-retro-illustration.png"
+        alt="Retro illustration of Ela with electronics">
+    </div>
+
   </main>
 </body>
 </html>
