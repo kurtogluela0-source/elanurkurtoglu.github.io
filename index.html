@@ -8,6 +8,44 @@
 
   <title>Elanur Kurtoğlu | Engineering Portfolio</title>
 
+    .navbar {
+      background: #d9d9d9;
+      border: 3px solid black;
+      border-bottom: 0;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      color: #111;
+      font-weight: 800;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .navbar .logo {
+      font-size: 28px;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        gap: 16px;
+        padding: 15px;
+      }
+
+      .navbar a {
+        font-size: 14px;
+      }
+    }
+
   <style>
     * {
       box-sizing: border-box;
@@ -86,6 +124,14 @@
     }
   </style>
 </head>
+
+  <nav class="navbar">
+    <a class="logo" href="#">▣</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#learn">Learn</a>
+    <a href="mailto:your-email@example.com">Contact</a>
+  </nav>
 
 <body>
   <main class="hero">
