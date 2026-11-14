@@ -1,380 +1,88 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ela Nur Kurtoğlu — Electrical & Electronics Engineering, embedded systems, PCB design and EV technologies.">
   <title>Ela Nur Kurtoğlu | Engineering Portfolio</title>
-  <meta name="description"
-        content="Electrical and Electronics Engineering portfolio of Ela Nur Kurtoğlu. Embedded Systems, PCB Design and EV Technologies.">
-
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: #f5f5f5;
-      color: #111;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    /* RETRO NAVIGATION */
-
-    .navbar {
-      min-height: 65px;
-      background: #d9d9d9;
-      border: 3px solid #111;
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      padding: 12px 6%;
-      flex-wrap: wrap;
-    }
-
-    .navbar a {
-      font-size: 17px;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .navbar a:hover {
-      text-decoration: underline;
-    }
-
-    .logo {
-      font-size: 28px !important;
-      line-height: 1;
-    }
-
-    /* HERO SECTION */
-
-    .hero {
-      min-height: 620px;
-      background: #fff;
-      border-left: 3px solid #111;
-      border-right: 3px solid #111;
-      padding: 75px 6% 45px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .hero-text {
-      flex: 1;
-      min-width: 0;
-    }
-
-    h1 {
-      font-size: clamp(55px, 7vw, 100px);
-      font-weight: 900;
-      line-height: 1.02;
-      letter-spacing: -4px;
-      margin: 0 0 30px;
-    }
-
-    .hero-text p {
-      max-width: 550px;
-      font-size: 19px;
-      line-height: 1.6;
-      font-weight: 500;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 16px 25px;
-      background: #d9d9d9;
-      border: 3px solid #111;
-      box-shadow: 5px 5px 0 #111;
-      font-weight: 800;
-      text-decoration: none;
-      transition: transform 0.2s,
-                  box-shadow 0.2s;
-    }
-
-    .button:hover {
-      transform: translate(3px, 3px);
-      box-shadow: 2px 2px 0 #111;
-    }
-
-    .hero-image {
-      flex: 1.2;
-      min-width: 0;
-    }
-
-    .hero-image img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    /* QUICK LINKS */
-
-    .quick-links {
-      padding: 30px 6% 55px;
-      background: white;
-      border-left: 3px solid #111;
-      border-right: 3px solid #111;
-      border-bottom: 3px solid #111;
-    }
-
-    .quick-links h2 {
-      margin: 0 0 15px;
-      font-size: 25px;
-      font-weight: 900;
-    }
-
-    .links-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 3px solid #111;
-      box-shadow: 5px 5px 0 #111;
-    }
-
-    .link-box {
-      min-height: 65px;
-      padding: 18px 15px;
-      background: #d9d9d9;
-      border-right: 3px solid #111;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .link-box:last-child {
-      border-right: none;
-    }
-
-    .link-box:hover {
-      background: #bbb;
-    }
-
-    .arrow {
-      font-size: 24px;
-    }
-
-    /* PLACEHOLDER SECTIONS */
-
-    .section {
-      padding: 75px 6%;
-      border: 3px solid #111;
-      border-top: 0;
-      background: #f5f5f5;
-    }
-
-    .section h2 {
-      font-size: 45px;
-      margin: 0 0 15px;
-      font-weight: 900;
-    }
-
-    .section p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .section.white {
-      background: white;
-    }
-
-    /* MOBILE */
-
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f3f3f3; color: #111; }
+    a { color: inherit; }
+    .navbar { min-height: 65px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; padding: 13px 6%; background: #d9d9d9; border: 3px solid #111; }
+    .navbar a { color: #111; font-size: 17px; font-weight: 800; text-decoration: none; }
+    .navbar a:hover, .navbar a:focus-visible { text-decoration: underline; }
+    .navbar .logo { font-size: 29px; line-height: 1; }
+    .hero { background: #fff; border-left: 3px solid #111; border-right: 3px solid #111; padding: 55px 6% 24px; min-height: 590px; display: flex; align-items: center; gap: 24px; }
+    .hero-text { flex: 1; min-width: 0; }
+    h1 { font-size: clamp(56px, 7vw, 100px); line-height: 1.02; letter-spacing: -4px; margin: 0 0 30px; font-weight: 900; }
+    .hero-text p { max-width: 530px; font-size: 19px; line-height: 1.55; }
+    .button { display: inline-block; margin-top: 22px; padding: 15px 24px; background: #d9d9d9; border: 3px solid #111; box-shadow: 5px 5px 0 #111; font-weight: 800; text-decoration: none; transition: transform .15s, box-shadow .15s; }
+    .button:hover { transform: translate(3px,3px); box-shadow: 2px 2px 0 #111; }
+    .hero-image { flex: 1.15; min-width: 0; }
+    .hero-image img { width: 100%; height: auto; display: block; }
+    .quick-links { background: #fff; padding: 28px 6% 50px; border: 3px solid #111; border-top: 0; }
+    .quick-links h2 { margin: 0 0 15px; font-size: 25px; font-weight: 900; }
+    .links-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border: 3px solid #111; box-shadow: 5px 5px 0 #111; }
+    .link-box { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 65px; padding: 15px; background: #d9d9d9; border-right: 3px solid #111; font-weight: 800; text-decoration: none; }
+    .link-box:last-child { border-right: 0; }
+    .link-box:hover { background: #bbb; }
+    .arrow { font-size: 23px; }
+    .section { padding: 68px 6%; border: 3px solid #111; border-top: 0; background: #f3f3f3; }
+    .section.white { background: #fff; }
+    .section h2 { font-size: clamp(34px,4vw,48px); margin: 0 0 15px; }
+    .section p { font-size: 18px; line-height: 1.6; }
     @media (max-width: 850px) {
-      .navbar {
-        gap: 18px;
-        padding: 15px 5%;
-      }
-
-      .navbar a {
-        font-size: 14px;
-      }
-
-      .hero {
-        flex-direction: column;
-        align-items: stretch;
-        min-height: auto;
-        padding: 65px 6% 30px;
-      }
-
-      h1 {
-        font-size: clamp(55px, 12vw, 85px);
-      }
-
-      .hero-image {
-        width: 100%;
-      }
-
-      .links-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .link-box:nth-child(2) {
-        border-right: none;
-      }
-
-      .link-box:nth-child(-n+2) {
-        border-bottom: 3px solid #111;
-      }
-
-      .section h2 {
-        font-size: 36px;
-      }
+      .navbar { gap: 18px; padding: 14px 5%; }
+      .navbar a { font-size: 14px; }
+      .hero { flex-direction: column; align-items: stretch; min-height: auto; padding: 52px 6% 25px; }
+      h1 { font-size: clamp(55px, 12vw, 85px); }
+      .hero-image { width: 100%; }
+      .links-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .link-box:nth-child(2) { border-right: 0; }
+      .link-box:nth-child(-n+2) { border-bottom: 3px solid #111; }
     }
-
     @media (max-width: 450px) {
-      .links-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .link-box {
-        border-right: none;
-        border-bottom: 3px solid #111;
-      }
-
-      .link-box:last-child {
-        border-bottom: none;
-      }
-
-      .link-box:nth-child(2) {
-        border-bottom: 3px solid #111;
-      }
+      .links-grid { grid-template-columns: 1fr; }
+      .link-box { border-right: 0; border-bottom: 3px solid #111; }
+      .link-box:last-child { border-bottom: 0; }
     }
   </style>
 </head>
-
 <body>
-
-  <!-- NAVIGATION -->
-
-  <nav class="navbar">
-    <a class="logo" href="#home">▣</a>
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="logo" href="#home" aria-label="Home">▣</a>
     <a href="#projects">Projects</a>
     <a href="#blog">Blog</a>
     <a href="#learn">Learn</a>
     <a href="#contact">Contact</a>
   </nav>
-
-  <!-- HERO -->
-
-  <main class="hero" id="home">
-
-    <div class="hero-text">
-
-      <h1>Hello.<br>I'm Ela.</h1>
-
-      <p>
-        I'm an Electrical & Electronics Engineering
-        student interested in embedded systems,
-        PCB design and EV technologies.
-      </p>
-
-      <a href="#projects" class="button">
-        View my projects
-      </a>
-
-    </div>
-
-    <div class="hero-image">
-      <img
-        src="ela-retro-illustration.png"
-        alt="Retro illustration of Ela with electronics">
-    </div>
-
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Hello.<br>I'm Ela.</h1>
+        <p>I'm an Electrical &amp; Electronics Engineering student interested in embedded systems, PCB design and EV technologies.</p>
+        <a class="button" href="#projects">View my projects</a>
+      </div>
+      <div class="hero-image">
+        <img src="ela-retro-illustration.png" alt="Black-and-white retro illustration of Ela and electronics" loading="eager">
+      </div>
+    </section>
+    <section class="quick-links" aria-label="Quick links">
+      <h2>Quick Links</h2>
+      <div class="links-grid">
+        <a class="link-box" href="#projects"><span>⌘ Projects</span><span class="arrow">↗</span></a>
+        <a class="link-box" href="#blog"><span>▤ Blog</span><span class="arrow">↗</span></a>
+        <a class="link-box" href="#learn"><span>◇ Learn</span><span class="arrow">↗</span></a>
+        <a class="link-box" href="#contact"><span>✉ Contact</span><span class="arrow">↗</span></a>
+      </div>
+    </section>
+    <section class="section" id="projects"><h2>Projects</h2><p>Explore my work in embedded systems, PCB design and electric vehicle technologies.</p><p>Project cards coming soon.</p></section>
+    <section class="section white" id="blog"><h2>From the Blog</h2><p>Engineering notes and technical discoveries.</p><p>Blog posts coming soon.</p></section>
+    <section class="section" id="learn"><h2>Learn</h2><p>My engineering learning journey, experiments and technical resources.</p></section>
+    <section class="section white" id="contact"><h2>Contact</h2><p>Interested in collaborating or discussing engineering projects?</p><p>Connect with me on <a href="https://github.com/kurtogluela0-source" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></section>
   </main>
-
-  <!-- QUICK LINKS -->
-
-  <section class="quick-links">
-
-    <h2>Quick Links</h2>
-
-    <div class="links-grid">
-
-      <a href="#projects" class="link-box">
-        <span>⌘ Projects</span>
-        <span class="arrow">↗</span>
-      </a>
-
-      <a href="#blog" class="link-box">
-        <span>▤ Blog</span>
-        <span class="arrow">↗</span>
-      </a>
-
-      <a href="#learn" class="link-box">
-        <span>◇ Learn</span>
-        <span class="arrow">↗</span>
-      </a>
-
-      <a href="#contact" class="link-box">
-        <span>✉ Contact</span>
-        <span class="arrow">↗</span>
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECTS -->
-
-  <section class="section" id="projects">
-    <h2>Projects</h2>
-    <p>
-      Explore my work in embedded systems,
-      PCB design and electric vehicle technologies.
-    </p>
-    <p>Project cards coming soon.</p>
-  </section>
-
-  <!-- BLOG -->
-
-  <section class="section white" id="blog">
-    <h2>From the Blog</h2>
-    <p>Engineering notes and technical discoveries.</p>
-    <p>Blog posts coming soon.</p>
-  </section>
-
-  <!-- LEARN -->
-
-  <section class="section" id="learn">
-    <h2>Learn</h2>
-    <p>
-      My engineering learning journey,
-      experiments and technical resources.
-    </p>
-  </section>
-
-  <!-- CONTACT -->
-
-  <section class="section white" id="contact">
-    <h2>Contact</h2>
-    <p>
-      Interested in collaborating or discussing
-      engineering projects?
-    </p>
-    <p>
-      Connect with me on
-      <a href="https://github.com/kurtogluela0-source"
-         target="_blank" rel="noopener noreferrer">
-        GitHub
-      </a>.
-    </p>
-  </section>
-
 </body>
 </html>
