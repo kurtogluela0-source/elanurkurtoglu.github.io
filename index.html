@@ -6,23 +6,46 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>Elanur Kurtoğlu | Engineering Portfolio</title>
+  <title>Ela Nur Kurtoğlu | Engineering Portfolio</title>
+  <meta name="description"
+        content="Electrical and Electronics Engineering portfolio of Ela Nur Kurtoğlu. Embedded Systems, PCB Design and EV Technologies.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f5f5;
+      color: #111;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* RETRO NAVIGATION */
 
     .navbar {
+      min-height: 65px;
       background: #d9d9d9;
-      border: 3px solid black;
-      border-bottom: 0;
-      padding: 18px 6%;
+      border: 3px solid #111;
       display: flex;
       align-items: center;
       gap: 32px;
+      padding: 12px 6%;
       flex-wrap: wrap;
     }
 
     .navbar a {
-      color: #111;
-      font-weight: 800;
       font-size: 17px;
+      font-weight: 800;
       text-decoration: none;
     }
 
@@ -30,44 +53,23 @@
       text-decoration: underline;
     }
 
-    .navbar .logo {
-      font-size: 28px;
-      margin-right: 10px;
+    .logo {
+      font-size: 28px !important;
+      line-height: 1;
     }
 
-    @media (max-width: 768px) {
-      .navbar {
-        gap: 16px;
-        padding: 15px;
-      }
-
-      .navbar a {
-        font-size: 14px;
-      }
-    }
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: #f5f5f5;
-      color: #111;
-      font-family: Arial, sans-serif;
-    }
+    /* HERO SECTION */
 
     .hero {
-      min-height: 100vh;
+      min-height: 620px;
+      background: #fff;
+      border-left: 3px solid #111;
+      border-right: 3px solid #111;
+      padding: 75px 6% 45px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
-      padding: 70px 6%;
-      background: white;
-      border: 3px solid black;
-      overflow: hidden;
     }
 
     .hero-text {
@@ -76,28 +78,36 @@
     }
 
     h1 {
-      font-size: clamp(50px, 6vw, 90px);
-      line-height: 1.05;
-      letter-spacing: -3px;
-      margin: 0 0 25px;
+      font-size: clamp(55px, 7vw, 100px);
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -4px;
+      margin: 0 0 30px;
     }
 
-    p {
+    .hero-text p {
+      max-width: 550px;
       font-size: 19px;
       line-height: 1.6;
-      max-width: 520px;
+      font-weight: 500;
     }
 
     .button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 15px 25px;
-      background: #ddd;
-      border: 3px solid black;
-      color: black;
-      font-weight: bold;
+      margin-top: 22px;
+      padding: 16px 25px;
+      background: #d9d9d9;
+      border: 3px solid #111;
+      box-shadow: 5px 5px 0 #111;
+      font-weight: 800;
       text-decoration: none;
-      box-shadow: 4px 4px 0 black;
+      transition: transform 0.2s,
+                  box-shadow 0.2s;
+    }
+
+    .button:hover {
+      transform: translate(3px, 3px);
+      box-shadow: 2px 2px 0 #111;
     }
 
     .hero-image {
@@ -106,37 +116,166 @@
     }
 
     .hero-image img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
     }
 
-    @media (max-width: 768px) {
+    /* QUICK LINKS */
+
+    .quick-links {
+      padding: 30px 6% 55px;
+      background: white;
+      border-left: 3px solid #111;
+      border-right: 3px solid #111;
+      border-bottom: 3px solid #111;
+    }
+
+    .quick-links h2 {
+      margin: 0 0 15px;
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 3px solid #111;
+      box-shadow: 5px 5px 0 #111;
+    }
+
+    .link-box {
+      min-height: 65px;
+      padding: 18px 15px;
+      background: #d9d9d9;
+      border-right: 3px solid #111;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .link-box:last-child {
+      border-right: none;
+    }
+
+    .link-box:hover {
+      background: #bbb;
+    }
+
+    .arrow {
+      font-size: 24px;
+    }
+
+    /* PLACEHOLDER SECTIONS */
+
+    .section {
+      padding: 75px 6%;
+      border: 3px solid #111;
+      border-top: 0;
+      background: #f5f5f5;
+    }
+
+    .section h2 {
+      font-size: 45px;
+      margin: 0 0 15px;
+      font-weight: 900;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .section.white {
+      background: white;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .navbar {
+        gap: 18px;
+        padding: 15px 5%;
+      }
+
+      .navbar a {
+        font-size: 14px;
+      }
+
       .hero {
         flex-direction: column;
         align-items: stretch;
-        padding: 50px 6%;
+        min-height: auto;
+        padding: 65px 6% 30px;
+      }
+
+      h1 {
+        font-size: clamp(55px, 12vw, 85px);
       }
 
       .hero-image {
         width: 100%;
       }
+
+      .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .link-box:nth-child(2) {
+        border-right: none;
+      }
+
+      .link-box:nth-child(-n+2) {
+        border-bottom: 3px solid #111;
+      }
+
+      .section h2 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .links-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .link-box {
+        border-right: none;
+        border-bottom: 3px solid #111;
+      }
+
+      .link-box:last-child {
+        border-bottom: none;
+      }
+
+      .link-box:nth-child(2) {
+        border-bottom: 3px solid #111;
+      }
     }
   </style>
 </head>
 
+<body>
+
+  <!-- NAVIGATION -->
+
   <nav class="navbar">
-    <a class="logo" href="#">▣</a>
+    <a class="logo" href="#home">▣</a>
     <a href="#projects">Projects</a>
     <a href="#blog">Blog</a>
     <a href="#learn">Learn</a>
-    <a href="mailto:your-email@example.com">Contact</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-<body>
-  <main class="hero">
+  <!-- HERO -->
+
+  <main class="hero" id="home">
 
     <div class="hero-text">
+
       <h1>Hello.<br>I'm Ela.</h1>
 
       <p>
@@ -145,9 +284,10 @@
         PCB design and EV technologies.
       </p>
 
-      <a class="button" href="#projects">
+      <a href="#projects" class="button">
         View my projects
       </a>
+
     </div>
 
     <div class="hero-image">
@@ -157,5 +297,84 @@
     </div>
 
   </main>
+
+  <!-- QUICK LINKS -->
+
+  <section class="quick-links">
+
+    <h2>Quick Links</h2>
+
+    <div class="links-grid">
+
+      <a href="#projects" class="link-box">
+        <span>⌘ Projects</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a href="#blog" class="link-box">
+        <span>▤ Blog</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a href="#learn" class="link-box">
+        <span>◇ Learn</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a href="#contact" class="link-box">
+        <span>✉ Contact</span>
+        <span class="arrow">↗</span>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <p>
+      Explore my work in embedded systems,
+      PCB design and electric vehicle technologies.
+    </p>
+    <p>Project cards coming soon.</p>
+  </section>
+
+  <!-- BLOG -->
+
+  <section class="section white" id="blog">
+    <h2>From the Blog</h2>
+    <p>Engineering notes and technical discoveries.</p>
+    <p>Blog posts coming soon.</p>
+  </section>
+
+  <!-- LEARN -->
+
+  <section class="section" id="learn">
+    <h2>Learn</h2>
+    <p>
+      My engineering learning journey,
+      experiments and technical resources.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="section white" id="contact">
+    <h2>Contact</h2>
+    <p>
+      Interested in collaborating or discussing
+      engineering projects?
+    </p>
+    <p>
+      Connect with me on
+      <a href="https://github.com/kurtogluela0-source"
+         target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>.
+    </p>
+  </section>
+
 </body>
 </html>
